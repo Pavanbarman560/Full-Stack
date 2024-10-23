@@ -2,16 +2,17 @@
 
 const router = express.Router()
 
-const usersignupcontroller = require("../controller/usersignup")
-const usersignincontroller = require('../controller/usersignin')
-const userdetailcontroller = require('../controller/userdetail')
+const usersignupcontroller = require("../controller/user/usersignup")
+const usersignincontroller = require('../controller/user/usersignin')
+const userdetailcontroller = require('../controller/user/userdetail')
 const authtoken = require('../middleware/authtoken')
-const userlogout = require('../controller/userlogout')
-const allusers = require('../controller/allusers')
-const updateUser = require('../controller/updateUser')
-const uploadProductControllar = require('../controller/uploadProduct')
-const getProductsController = require('../controller/getProducts')
-const updateProductControllar = require('../controller/updateProduct')
+const userlogout = require('../controller/user/userlogout')
+const allusers = require('../controller/user/allusers')
+const updateUser = require('../controller/user/updateUser')
+const uploadProductControllar = require('../controller/product/uploadProduct')
+const getProductsController = require('../controller/product/getProducts')
+const updateProductControllar = require('../controller/product/updateProduct')
+const getCategoryproduct = require('../controller/product/getCategoryProduct')
 
 
 
@@ -30,5 +31,6 @@ router.post("/update-user", authtoken, updateUser)
 router.post("/upload-product", authtoken, uploadProductControllar)
 router.get("/get-product",getProductsController)
 router.post("/update-product",authtoken,updateProductControllar)
+router.get("/get-categoryporduct",getCategoryproduct)
 
 module.exports = router

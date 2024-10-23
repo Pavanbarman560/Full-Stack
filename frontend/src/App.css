@@ -16,3 +16,11 @@
 
     @apply border text-base text-center
 }
+
+/**scrool baar hidden by pavan****/
+
+.scrollbar-none::-webkit-scrollbar{
+
+display: none;
+
+}

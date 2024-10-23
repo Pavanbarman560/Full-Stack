@@ -1,4 +1,4 @@
-const usermodel = require("../models/usermodel")
+const usermodel = require("../../models/usermodel")
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs')
 async function usersignincontroller(req, res) {
