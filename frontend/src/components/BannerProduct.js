@@ -5,7 +5,7 @@ import image3 from '../assest/banner/3.webp'
 import image4 from '../assest/banner/4.webp'
 import image5 from '../assest/banner/5.webp'
 import image6 from '../assest/banner/6.jpg'
-import image6 from '../assest/banner/7.jpg'
+import image7 from '../assest/banner/7.jpg'
 
 
 import imagem1 from '../assest/banner/img1.webp'
@@ -29,6 +29,7 @@ const BannerProduct = () => {
         image4,
         image5,
         image6,
+        image7,
     ]
 
     const mobileImage = [
@@ -38,6 +39,7 @@ const BannerProduct = () => {
         imagem4,
         imagem5,
         imagem6,
+
     ]
 
     const nextImage = () => {
