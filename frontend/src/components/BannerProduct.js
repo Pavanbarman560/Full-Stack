@@ -8,12 +8,15 @@ import image6 from '../assest/banner/6.jpg'
 import image7 from '../assest/banner/7.jpg'
 
 
+import imagem7 from '../assest/banner/12.webp'
 import imagem1 from '../assest/banner/img1.webp'
 import imagem2 from '../assest/banner/img2.webp'
 import imagem3 from '../assest/banner/img3.webp'
 import imagem4 from '../assest/banner/img4.webp'
 import imagem5 from '../assest/banner/img5.webp'
 import imagem6 from '../assest/banner/img6.webp'
+
+
 
 import { FaAngleRight } from "react-icons/fa6";
 import { FaAngleLeft } from "react-icons/fa6";
@@ -33,6 +36,7 @@ const BannerProduct = () => {
     ]
 
     const mobileImage = [
+        imagem7,
         imagem1,
         imagem2,
         imagem3,
