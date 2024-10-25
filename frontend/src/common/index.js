@@ -1,5 +1,5 @@
 
-const backenddomain =  "https://full-stack-zbqz.onrender.com"
+const backenddomain = "https://full-stack-zbqz.onrender.com"
 
 const summaryapi = {
     signup: {
@@ -59,7 +59,13 @@ const summaryapi = {
     categoryProduct: {
 
         url: `${backenddomain}/api/get-categoryporduct`,
-        method : 'get'
+        method: 'get'
+
+    },
+    categorywiseproduct: {
+
+        url: `${backenddomain}/api/category-product`,
+        method: 'post'
 
     }
 }
