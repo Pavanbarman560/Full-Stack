@@ -3,7 +3,7 @@ import React from 'react';
 import CategoryList from '../components/CategoryList';
 import BannerProduct from '../components/BannerProduct';
 import HorizontalCartProduct from '../components/HorizontalCartProduct';
-import VerticalCartProduct from '../components/verticalCartProduct';
+import VerticalCartProduct from '../components/VerticalCartProduct';
 
 
 const Home = () => {
