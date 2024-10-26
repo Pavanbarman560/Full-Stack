@@ -14,6 +14,7 @@ const getProductsController = require('../controller/product/getProducts')
 const updateProductControllar = require('../controller/product/updateProduct')
 const getCategoryproduct = require('../controller/product/getCategoryProduct')
 const getCategorywiseProduct = require('../controller/product/getCategorywiseProduct')
+const getProductDetails = require('../controller/product/getProductDetails')
 
 
 
@@ -34,5 +35,6 @@ router.get("/get-product", getProductsController)
 router.post("/update-product", authtoken, updateProductControllar)
 router.get("/get-categoryporduct", getCategoryproduct)
 router.post("/category-product", getCategorywiseProduct)
+router.post("/product-details", getProductDetails)
 
 module.exports = router

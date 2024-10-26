@@ -1,5 +1,5 @@
 
-const backenddomain = "https://full-stack-zbqz.onrender.com"
+const backenddomain = "http://localhost:8080"
 
 const summaryapi = {
     signup: {
@@ -67,6 +67,10 @@ const summaryapi = {
         url: `${backenddomain}/api/category-product`,
         method: 'post'
 
+    },
+    productDetails: {
+        url: `${backenddomain}/api/product-details`,
+        method: 'post'
     }
 }
 export default summaryapi
