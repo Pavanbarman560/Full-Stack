@@ -6,6 +6,7 @@ import { FaStarHalf } from "react-icons/fa";
 import displayINRCurrency from '../helpers/displayCurrency';
 import CategoryWiseProductDisplay from '../components/CategoryWiseProductDisplay';
 
+
 const ProductDetails = () => {
 
   const [data, setData] = useState({
