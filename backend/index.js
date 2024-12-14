@@ -20,7 +20,7 @@ app.use(cookieParser());
 
 app.use("/api", router);
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 
 const _dirname = path.resolve();
 app.use(express.static(path.join(_dirname, "/frontend/build")));

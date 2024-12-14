@@ -12,39 +12,60 @@ import { useDispatch } from 'react-redux';
 import { setuserdetails } from './store/userslice';
 
 function App() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const featchuserdetails = async () => {
-
-    const dataresponce = await fetch(summaryapi.current_user.url, {
-
+  const fetchUserDetails = async () => {
+    const dataResponce = await fetch(summaryapi.current_user.url, {
       method: summaryapi.current_user.method,
-      credentials: 'include'
+      credentials: 'include',
+    });
 
-    })
-
-    const dataapi = await dataresponce.json()
-    if (dataapi.success) {
-      dispatch(setuserdetails(dataapi.data))
+    const dataApi = await dataResponce.json();
+    if (dataApi.success) {
+      dispatch(setuserdetails(dataApi.data));
     }
 
-    console.log("data user", dataresponce)
-
-  }
+    console.log('data user', dataResponce);
+  };
 
   useEffect(() => {
-    //user details
 
-    featchuserdetails()
+    // ye code maine frontend code of broswer me hide karne ke liye likha hai jo ki last dispatch tak hai
 
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+    document.addEventListener('keydown', (e) => {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+      }
+    });
 
-  })
+    //  user details
+    fetchUserDetails(); //already ye bas tha only
 
+    // Cleanup function to remove event listeners when the component unmounts
+
+    return () => {
+      document.removeEventListener('contextmenu', (e) => e.preventDefault());
+      document.removeEventListener('keydown', (e) => {
+        if (
+          e.key === 'F12' ||
+          (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+          (e.ctrlKey && e.shiftKey && e.key === 'J')
+        ) {
+          e.preventDefault();
+        }
+      });
+    };
+  }, [dispatch]); // Empty dependency array means this effect runs once on mount
 
   return (
     <>
       <context.Provider value={{
-        featchuserdetails
+        fetchUserDetails
       }}>
         <ToastContainer />
         <Header />
@@ -52,7 +73,6 @@ function App() {
           <Outlet />
         </main>
         <Footer />
-
       </context.Provider>
     </>
   );
