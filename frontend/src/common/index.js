@@ -1,4 +1,4 @@
-const backenddomain = "https://full-stack-zbqz.onrender.com"
+const backenddomain = "http://localhost:8080"
 
 const summaryapi = {
     signup: {
